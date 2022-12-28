@@ -46,11 +46,11 @@ const Login = () => {
 
     return (
   <div className=" w-full flex flex-col my-5 lg:flex-row">
-    <div className="text-center my-5 lg:text-left">
+    <div className="text-center my-5 lg:w-1/2 lg:text-left">
       
-      <img  src='https://www.sehat.com/sht-new-img/new/login-new.png'  className='h-full w-3/5 p-3 '  alt="" />
+      <img  src='https://www.sehat.com/sht-new-img/new/login-new.png'  className='h-full w-full p-3 '  alt="" />
     </div>
-    <div className=" flex-shrink-0 w-full my-5 py-5 max-w-sm shadow-2xl ">
+    <div className=" flex-shrink-0 lg:w-1/2 my-5 py-5 max-w-sm shadow-2xl ">
       <div >
 
       <h1 className="text-5xl font-bold">Login now!</h1>
