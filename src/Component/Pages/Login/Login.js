@@ -1,6 +1,6 @@
 import {React,useContext} from 'react';
 
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 import { GoogleAuthProvider } from 'firebase/auth';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
@@ -50,30 +50,24 @@ const Login = () => {
       
       <img  src='https://www.sehat.com/sht-new-img/new/login-new.png'  className='h-full w-full p-3 '  alt="" />
     </div>
-    <div className=" flex-shrink-0 lg:w-1/2 my-5 py-5 max-w-sm shadow-2xl ">
-      <div >
+    <div className=" flex-shrink-0 lg:w-1/2 flex justify-center my-5 py-5 max-w-sm shadow-2xl ">
+      <div className='w-4/5 mx-auto' >
 
-      <h1 className="text-5xl font-bold">Login now!</h1>
-        <form onSubmit={handleLogin} >
-          <label className="label">
-            <span className="label-text font-bold">Email</span>
-          </label>
-          <input type="text" name='email' placeholder="email" className="input input-bordered" />
-       
-          <label className="label">
-            <span className="label-text font-bold">Password</span>
-          </label>
-          <input type="password" name='password' placeholder="password" className="input input-bordered" />
-          <label className="label">
-           
-          </label>
-          <input className='btn btn-warning my-3' type="submit" value="Sign In" />
+      <h1 className="text-5xl text-center mb-10 font-bold">Login now!</h1>
+        <form className='flex flex-col' onSubmit={handleLogin} >
+
+        
+                <label className=' font-semibold my-2'>Email</label>
+                <input className='mb-2  p-2 rounded'  type="email" name="email" placeholder='Enter your email' />
+                <label className=' font-semibold my-2'>Password</label>
+                <input className='mb-2  p-2 rounded' type="password" placeholder='Enter your password' name="password" />
+
+                <div className='pb-1 w-full flex justify-center mt-3'><input className=' bg-green-500 hover:bg-green-800  p-2 rounded w-full font-semibold'  type="submit" value="Login" /></div>
        
         </form>
 
-
-        <button onClick={google} className='btn btn-warning'>Google</button>
-       
+        <div  className='pb-10 w-full flex justify-center mt-1'><button onClick={google} className=' bg-green-500 hover:bg-green-800 font-semibold p-2 rounded w-full'>Google</button></div>   
+        <p className='font-semibold'>New to easy-task manager? let's go <button className='text-green-600 hover:text-green-800 '><Link to='/signup'>SignUp</Link></button></p> 
       </div>
     </div>
   </div>

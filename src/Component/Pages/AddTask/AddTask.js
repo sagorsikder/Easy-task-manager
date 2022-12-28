@@ -36,7 +36,7 @@ const AddTask = () => {
     }
     return (
         <div className='bg-blue-500'>
-            <h1 className='text-center lg:text-5xl font-bold  text-green-700 pt-10'>Add any task </h1>
+            <h1 className='text-center lg:text-5xl font-bold  text-white pt-10'>Add any task </h1>
 
             <form className='flex w-3/4 mx-auto flex-col' onSubmit={handleForm}>
                 <label className='text-white font-semibold my-2'>Name</label>
