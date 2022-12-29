@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import useTitle from '../../Hooks/useTitle';
 
 const AddTask = () => {
     useTitle('add task');
 
+    const navigate = useNavigate()
     const{user} = useContext(AuthContext)
     const handleForm=(event)=>{
         event.preventDefault()
@@ -33,6 +35,7 @@ const AddTask = () => {
                 alert('Add task successfully')
                 form.reset();
                 
+                navigate('/mytask')
             }
         })
         .catch(err=>console.error(err))
