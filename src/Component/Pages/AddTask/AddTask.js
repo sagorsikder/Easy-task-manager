@@ -19,7 +19,7 @@ const AddTask = () => {
         name,email,taskDetails,date,condition,photo
        }
 
-        fetch('http://localhost:5000/addtask',{
+        fetch(' https://easy-task-manager-server.vercel.app/addtask',{
             method:'POST',
             headers:{
                 'content-type':'application/json'

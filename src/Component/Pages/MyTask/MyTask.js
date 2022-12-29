@@ -12,7 +12,7 @@ const MyTask = () => {
 
     console.log(task)
     useEffect(()=>{
-        fetch(`http://localhost:5000/mytask?email=${user.email}`)
+        fetch(` https://easy-task-manager-server.vercel.app/mytask?email=${user.email}`)
         .then(res=> res.json())
         .then(data=>setTask(data))
     },[completed,user.email])
@@ -20,7 +20,7 @@ const MyTask = () => {
    const handleComplete=(id)=>{
 
   
-        fetch(`http://localhost:5000/update1?id=${id}`,{
+        fetch(` https://easy-task-manager-server.vercel.app/update1?id=${id}`,{
             method:'POST',
             headers:{
                 'content-type':'application/json'
@@ -35,7 +35,7 @@ const MyTask = () => {
    const handleDelete=(id)=>{
 
   
-    fetch(`http://localhost:5000/delete1?id=${id}`,{
+    fetch(` https://easy-task-manager-server.vercel.app/delete1?id=${id}`,{
         method:'POST',
         headers:{
             'content-type':'application/json'
